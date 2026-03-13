@@ -17,6 +17,7 @@ return(
 <Link to="/json">JSON Tool</Link>
 <Link to="/api">API Tester</Link>
 <Link to="/password">Password</Link>
+<Link to="/dashboard">Dashboard</Link>
 
 </div>
 

@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Navbar from "../components/Navbar"
 import Editor from "@monaco-editor/react"
+import { trackTool } from "../utils/toolTracker"
 import { FaCopy, FaDownload, FaMagic } from "react-icons/fa"
 
 export default function JsonFormatter(){
@@ -43,6 +44,10 @@ a.href = url
 a.download = "formatted.json"
 a.click()
 }
+
+useEffect(()=>{
+trackTool("JSON Formatter")
+},[])
 
 function handleDrop(e){
 e.preventDefault()

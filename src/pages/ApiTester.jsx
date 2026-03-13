@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Navbar from "../components/Navbar"
 import Editor from "@monaco-editor/react"
 import ApiHistory from "../components/ApiHistory"
 import { saveHistory } from "../utils/apiStorage"
+import { trackTool } from "../utils/toolTracker"
 
 export default function ApiTester(){
 
@@ -14,6 +15,10 @@ const [response,setResponse] = useState("")
 const [status,setStatus] = useState("")
 const [time,setTime] = useState("")
 const [authToken,setAuthToken] = useState("")
+
+useEffect(()=>{
+trackTool("JSON Formatter")
+},[])
 
 async function sendRequest(){
 
@@ -52,6 +57,7 @@ console.log(err)
 setResponse("Request failed")
 
 }
+
 
 }
 

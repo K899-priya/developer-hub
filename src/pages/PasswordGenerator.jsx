@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Navbar from "../components/Navbar"
 import MatrixBackground from "../components/MatrixBackground"
 import { FaCopy, FaRedo } from "react-icons/fa"
 import { QRCodeCanvas } from "qrcode.react"
+import { trackTool } from "../utils/toolTracker"
 
 export default function PasswordGenerator(){
 
@@ -13,6 +14,11 @@ const [lower,setLower] = useState(true)
 const [numbers,setNumbers] = useState(true)
 const [symbols,setSymbols] = useState(true)
 const [breach,setBreach] = useState("")
+
+useEffect(()=>{
+trackTool("Password Generator")
+},[])
+
 
 function generatePassword(){
 
