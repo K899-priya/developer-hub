@@ -16,9 +16,8 @@ export default function Home() {
       <Navbar />
 
       {/* Background Animations */}
-      
-      <GalaxyBackground />
       <Background3D />
+      <GalaxyBackground />
       <FloatingSymbols />
 
       {/* Hero Section */}
