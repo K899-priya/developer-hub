@@ -5,7 +5,7 @@ export default function Navbar(){
 
 return(
 
-<nav className="flex justify-between p-4 bg-slate-900">
+<nav className="flex justify-between p-4 bg-transparent backdrop-blur-lg border-white/5">
 
 <h1 className="text-xl flex gap-2 items-center">
 <FaCode/> Developer Hub

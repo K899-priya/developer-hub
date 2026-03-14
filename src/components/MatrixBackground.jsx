@@ -51,7 +51,7 @@ setInterval(draw,35)
 return(
 <canvas
 id="matrix"
-className="fixed top-0 left-0 -z-10"
+className="fixed top-0 left-0 w-full h-full -z-10"
 />
 )
 
