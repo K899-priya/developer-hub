@@ -11,13 +11,14 @@ import { FaCode, FaKey, FaServer, FaFileCode } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen bg-transparent text-white overflow-hidden">
 
       <Navbar />
 
       {/* Background Animations */}
-      <Background3D />
+      
       <GalaxyBackground />
+      <Background3D />
       <FloatingSymbols />
 
       {/* Hero Section */}
